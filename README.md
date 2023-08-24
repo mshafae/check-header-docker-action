@@ -2,6 +2,8 @@
 
 This action takes a list of C++ source files and checks to see if each file contains the required Cal State Fullerton CPSC header.
 
+Inspired by the tutorial at https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action.
+
 ## Inputs
 
 ## `src-files`
