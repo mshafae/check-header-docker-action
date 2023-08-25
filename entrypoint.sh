@@ -8,5 +8,5 @@ echo "The time is $time"
 ls -la
 wc -l *.cc
 echo "resultsx<<EOF" >> $GITHUB_OUTPUT
-python3 .action/checks.py header $*
+python3 .action/checks.py header all
 echo "EOF" >> $GITHUB_OUTPUT
