@@ -6,11 +6,11 @@ description: 'For Cal State Fullerton CPSC courses; check a group of C++ source 
 #     description: 'List of source files to check'
 #     required: true
 #     # default: 'World'
-outputs:
-  resultsx: # id of output
-    description: 'The output from the check header run.'
+# outputs:
+#   resultsx: # id of output
+#     description: 'The output from the check header run.'
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.src-files }}
+  # args:
+  #   - ${{ inputs.src-files }}
