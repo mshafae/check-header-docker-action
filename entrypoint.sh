@@ -6,6 +6,6 @@ echo "Entrypoint Args: $*"
 # echo "Testing A B C" >> $GITHUB_OUTPUT
 time=$(date)
 echo "The time is $time"
-ls
-wc -l *.cc *.h
+ls -la
+wc -l *.cc
 # echo "EOF" >> $GITHUB_OUTPUT
