@@ -1,23 +1,25 @@
 # C++ Check Header Docker Action
 
-This action takes a list of C++ source files and checks to see if each file contains the required Cal State Fullerton CPSC header.
+This action takes a CPSC 120 lab configuration and checks each graded file to see if the file contains the required Cal State Fullerton CPSC header.
 
 Inspired by the tutorial at https://docs.github.com/en/actions/creating-actions/creating-a-docker-container-action.
 
 ## Inputs
 
-## `src-files`
+The container runs a script in the .action directory which uses the `lab_config.py` file to identify the input files.
 
-**Required** The list of source files. No default value.
+Additionally, the action assumes that the repository has been checked out using the `actions/checkout` action.
 
 ## Outputs
 
-## `check-results`
-
-The results from the run.
+All the output is on `stdout`.
 
 ## Example usage
 
-uses: actions/cpp-check-header-docker-action@v2
-with:
-  src-files: 'main.cpp foo.cpp header.h'
+```
+    steps:
+      - uses: actions/checkout@v3
+      - name: Header Check - Make sure the file(s) have the correct header
+        id: header-check
+        uses: mshafae/cpp-check-header-docker-action@v1
+```
