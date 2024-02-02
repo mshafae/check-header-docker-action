@@ -18,7 +18,7 @@ All the output is on `stdout`.
 
 ```
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Header Check - Make sure the file(s) have the correct header
         id: header-check
         uses: mshafae/cpp-check-header-docker-action@v1
